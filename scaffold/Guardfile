@@ -1,0 +1,4 @@
+guard :shell do
+  watch(%r{assets/css/_src/*})     { |file| system( "rake assets:compile:sass" ) }
+  watch(%r{assets/scripts/_(src|lib)*})  { |file| system( "rake assets:compile:scripts" ) }
+end
