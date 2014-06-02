@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+
+require_relative '../lib/wordpress-scaffold/cli'
+Wordpress::Scaffold::Cli::Base.start

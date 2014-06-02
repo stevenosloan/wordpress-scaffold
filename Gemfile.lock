@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    wordpress-view_controller (0.0.0)
+    wordpress-scaffold (0.0.0)
       borrower
       thor
 
@@ -17,4 +17,4 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  wordpress-view_controller!
+  wordpress-scaffold!

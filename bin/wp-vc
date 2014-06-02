@@ -1,4 +1,0 @@
-#!/usr/bin/env ruby
-
-require_relative '../lib/wordpress-view_controller/cli'
-Wordpress::ViewController::Cli::Base.start

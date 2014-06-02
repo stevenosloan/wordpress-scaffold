@@ -1,15 +1,15 @@
 require "thor"
-require "wordpress-view_controller"
+require "wordpress-scaffold"
 
 module Wordpress
-  module ViewController
+  module Scaffold
     module Cli
 
       class Base < Thor
 
         desc "version", "display version"
         def version
-          say "Wordpress::ViewController #{Wordpress::ViewController::VERSION}"
+          say "Wordpress::Scaffold #{Wordpress::Scaffold::VERSION}"
         end
 
         desc "scaffold [options]", "scaffold wordpress theme"
