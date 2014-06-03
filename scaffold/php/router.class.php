@@ -11,6 +11,8 @@
     **
     **    Router::map( array(
     **      'is_single' => 'single',
+    **      'is_page'   => array( '123' => 'page',
+    **                            '345' => 'archive' ),
     **      'default'   => 'index'
     **    ));
     **
@@ -26,10 +28,19 @@
       $default = $routes_array['default'];
       unset( $routes_array['default'] );
 
-      foreach( $routes_array as $conditional => $view ) {
-        if( call_user_func($conditional) ) {
-          View::render( $view, $format );
-          exit();
+      foreach( $routes_array as $conditional => $args ) {
+        if( is_array($args) ) {
+          foreach( $args as $id => $view ) {
+            if( call_user_func_array( $conditional, $id ) ) {
+              View::render( $view, $format );
+              exit();
+            }
+          }
+        } else {
+          if( call_user_func($conditional) ) {
+            View::render( $args, $format );
+            exit();
+          }
         }
       }
 
