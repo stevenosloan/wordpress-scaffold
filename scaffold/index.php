@@ -23,7 +23,7 @@
 
   $_load_paths = array(
     'views/helpers',
-    'lib'
+    'php'
   );
 
   spl_autoload_register( function ( $class_name ) {
