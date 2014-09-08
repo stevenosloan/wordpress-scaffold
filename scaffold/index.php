@@ -32,6 +32,9 @@
       if ( file_exists( THEME_DIR . '/' . $load_path.'/'.$class_name.'.php' ) ) {
         require_once $load_path.'/'.$class_name.'.php';
         return;
+      } else if ( file_exists( THEME_DIR.'/'$load_path.'/'.strtolower($class_name).'.php') ) {
+        require_once $load_path.'/'.strtolower($class_name).'.php';
+        return;
       }
     }
   });
