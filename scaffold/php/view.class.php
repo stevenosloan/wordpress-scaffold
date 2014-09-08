@@ -20,7 +20,7 @@
     **  @param $view [String] view to include
     **  @return [Void]
     */
-    public static function yield( $view ) {
+    public static function template( $view ) {
       include ( 'views/' . $view . '.php' );
     }
 
